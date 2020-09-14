@@ -434,7 +434,7 @@ const recipes = [
     rating: 5,
   },
   {
-    title: "Food Allergy Mums' really chocolatey chocolate cake",
+    title: "Vegan chocolate cake",
     ingredients: [
       "450 ml rice milk",
       "1 tablespoon cider vinegar",
@@ -467,7 +467,7 @@ const recipes = [
     rating: 5,
   },
   {
-    title: "Smoked salmon, prawns & Miami cocktail sauce",
+    title: "Prawns snack",
     ingredients: [
       "3 baby gem lettuces",
       "300 g smoked salmon , from sustainable sources",
@@ -525,28 +525,6 @@ const recipes = [
       "Serve the chicken with the couscous, peppers, greens and houmous or yoghurt, scattered with the hazelnuts and with a lemon wedge on the side. Nice with a drizzle of hot chilli sauce too.",
     ],
     serves: 2,
-    rating: 5,
-  },
-  {
-    title: "Vodka Martini",
-    ingredients: [
-      "50 ml Grey Goose vodka",
-      "10 ml Noilly Prat",
-      "ice, cubed",
-      "a twist of lemon",
-    ],
-    categories: "Drinks",
-    image:
-      "https://img.jamieoliver.com/jamieoliver/recipe-database/oldImages/large/1214_1_1439308972.jpg",
-    preparationTime: 5,
-    description: [
-      "Fill your Martini glass with ice to chill.",
-      "Pour the Grey Goose Vodka and the chilled Noilly Prat vermouth into a cocktail shaker.",
-      "Add the ice and stir for 30 seconds.",
-      "Empty your glass of ice and pour in the drink through a strainer.",
-      "Garnish with a twist of lemon.",
-    ],
-    serves: 1,
     rating: 5,
   },
   {
