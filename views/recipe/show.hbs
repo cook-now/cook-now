@@ -1,0 +1,17 @@
+<h1>{{recipe.title}}</h1>
+<img src="{{recipe.image}}" alt="Image for {{recipe.image}}">
+<h3>Categorie: {{recipe.categories}}</h3>
+<h4>Preparation time: {{recipe.preparationTime}} mins</h4>
+<h3>Ingredients:</h3>
+{{#each recipe.ingredients}}
+<li>{{this}}</li>
+{{/each}}
+<ol>
+<h3>Methods:</h3>
+{{#each recipe.description}}
+<li>{{this}}</li>
+{{/each}}
+</ol>
+
+<h4>Serves: {{recipe.serves}}</h4>
+<h4>Rating: {{recipe.rating}}</h4>

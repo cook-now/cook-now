@@ -54,4 +54,7 @@ app.locals.title = "Cook Now";
 const index = require("./routes/index");
 app.use("/", index);
 
+const recipes = require("./routes/recipe");
+app.use("/", recipes);
+
 module.exports = app;
