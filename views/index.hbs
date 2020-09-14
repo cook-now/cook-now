@@ -1,2 +1,28 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="top-home">
+  <div class="title-home">
+    <h1>COOK NOW</h1>
+    <h2>Explore the force of your fridge.</h2>
+    <p>COOK NOW is an app for food lovers to discover their favorite recipes and try them out.</p>
+    {{!-- {{#if loggedIn}} --}}
+    {{!-- <a class="btn btn-outline-info" href="/recipe/create">Create Recipe</a> --}}
+    {{!-- {{else}} --}}
+    <a class="btn btn-outline-danger" href="/auth/signup">Create your account</a>
+    {{!-- {{/if}} --}}
+  </div>
+</div>
+<br>
+<div class="title">
+  <h1>Popular Recipes</h1>
+</div>
+<div class="flex-container">
+  {{#each recipes}}
+  <div class="each-recipe">
+    <img src="{{image}}">
+    <p>{{title}}</p>
+    {{!-- <a href="recipe/{{_id}}">
+      <img src="{{image}}">
+      <p>{{title}} | &#9829; {{rating}}</p> --}}
+    </a>
+  </div>
+  {{/each}}
+</div>
