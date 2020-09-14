@@ -55,6 +55,6 @@ const index = require("./routes/index");
 app.use("/", index);
 
 const recipes = require("./routes/recipe");
-app.use("/recipe", recipes);
+app.use("/", recipes);
 
 module.exports = app;
