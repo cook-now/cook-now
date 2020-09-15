@@ -32,6 +32,10 @@ const schemaRecipe = new Schema({
   rating: {
     type: Number,
     default: 0
+  },
+  keyWords: {
+    type: [],
+    required: true
   }
 });
 

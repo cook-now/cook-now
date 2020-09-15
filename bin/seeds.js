@@ -20,7 +20,8 @@ const recipes = [
       "Transfer to a roasting tray and add a good lug of olive oil and a pinch of salt and pepper. Toss together so all the wedges are coated in the oil then spread out in one layer. Cook in the hot oven for 30 minutes until golden, crisp and cooked through. Delicious served with steak or chicken.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["black paper", "potatoes", "olive oil"],
   },
   {
     title: "Asparagus & halloumi salad",
@@ -45,7 +46,8 @@ const recipes = [
       "Pour the dressing over the other ingredients, toss well and serve on a platter while the halloumi is still warm.",
     ],
     serves: 3,
-    rating: 4,
+    rating: 4.7,
+    keyWords: ["halloumi", "oranges", "onions", "asparagus"],
   },
   {
     title: "Italian baked eggs",
@@ -69,10 +71,11 @@ const recipes = [
       "Pick over a few marjoram or basil leaves, and tuck in. Delicious served with hot buttered toast.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["eggs", "tomatoes", "mozzarella", "olive oil"],
   },
   {
-    title: "White chocolate & cranberry cookies",
+    title: "White chocolate cookies",
     ingredients: [
       "100 g unsalted butter",
       "85 g icing sugar",
@@ -95,7 +98,8 @@ const recipes = [
       "Carefully transfer the cookies onto a cooling rack and allow to cool and crisp a little before eating.",
     ],
     serves: 14,
-    rating: 4,
+    rating: 4.3,
+    keyWords: ["sugar", "butter", "flour", "chocolate", "cranberries"],
   },
   {
     title: "Green shakshuka",
@@ -129,7 +133,8 @@ const recipes = [
       "Pick and roughly chop the mint leaves and dill, then sprinkle over the eggs. Crumble over the feta and serve straight away.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.9,
+    keyWords: ["eggs", "onions", "feta cheese", "lemons"],
   },
   {
     title: "Chicken & garlic bread kebabs",
@@ -160,10 +165,11 @@ const recipes = [
       "Meanwhile, top and tail the blood oranges, trim off the peel, then slice into rounds. Dress the spinach with a squeeze of lemon juice and a drizzle of oil, arrange on your plates with the blood oranges and drizzle with the balsamic. Top with the kebabs, crumble over the feta and serve with lemon wedges.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.8,
+    keyWords: ["chicken", "oranges", "feta cheese", "spinach"],
   },
   {
-    title: "Crêpes with banana & Greek yoghurt",
+    title: "Crêpes with banana & yoghurt",
     ingredients: [
       "130 g flour",
       "300 ml whole milk",
@@ -190,7 +196,8 @@ const recipes = [
       "Spread each crêpe with some Greek yoghurt and add a spoonful of banana. Fold in half and fold again into quarters. Drizzle with a little honey or maple syrup to serve.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 4.6,
+    keyWords: ["flour", "honey", "milk", "yoghurt"],
   },
   {
     title: "Steaming ramen",
@@ -237,7 +244,8 @@ const recipes = [
       "Tear over the seaweed and divide up the kimchee. Drizzle with chilli oil, then break over the crackling. Slurp away!",
     ],
     serves: 8,
-    rating: 4,
+    rating: 4.1,
+    keyWords: ["chicken", "pork", "eggs", "noodles"],
   },
   {
     title: "Spinach & tortellini soup",
@@ -260,6 +268,7 @@ const recipes = [
     ],
     serves: 2,
     rating: 5,
+    keyWords: ["tortellini", "peas", "spinach"],
   },
   {
     title: "Cherry brownies",
@@ -289,7 +298,8 @@ const recipes = [
       "Remove from the oven and cool in the tray, before cutting into squares.",
     ],
     serves: 16,
-    rating: 5,
+    rating: 4.8,
+    keyWords: ["chockolate", "eggs", "flour", "cherries", "pecans"],
   },
   {
     title: "Mexican-style steak",
@@ -334,7 +344,8 @@ const recipes = [
       "Finish with a few dollops of salsa, a scattering of the reserved coriander, drizzle over any resting juices, then serve up with the crispy potatoes and tuck in.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.4,
+    keyWords: ["steak", "tequila", "limes", "garlic", "peanuts"],
   },
   {
     title: "Christmas pudding vodka",
@@ -361,7 +372,8 @@ const recipes = [
       "Decant the vodka into clean bottles and seal – this will store for up to one year, and can be served from the freezer or at room temperature.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["vodka", "cinnamon", "orange", "sugar"],
   },
   {
     title: "Watermelon glory",
@@ -381,12 +393,13 @@ const recipes = [
       "Pour into glasses and serve with extra slices of watermelon, if you like.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["rum", "vanilla", "watermelon"],
   },
   {
     title: "Margarita",
     ingredients: [
-      "1 part Cazadores Tequila",
+      "1 part Cazadores tequila",
       "½ part triple sec liqueur",
       "1 whole lime, juiced",
       "1 a pinch of salt",
@@ -403,7 +416,8 @@ const recipes = [
       "Double strain the mix into the glass.",
     ],
     serves: 1,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["liquer","tequila", "limes", "salt"],
   },
   {
     title: "Pasta peperonata",
@@ -431,7 +445,8 @@ const recipes = [
       "Put the peppers, pasta and parsley leaves into a large warmed bowl. Give them a good toss together, then add a little of the pasta cooking water and a few good lugs of extra virgin olive oil to coat the pasta nicely. Serve straight away sprinkled with the rest of the Parmesan.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 4.7,
+    keyWords: ["pepper", "onions", "garlic", "penne", "vinegar"],
   },
   {
     title: "Vegan chocolate cake",
@@ -464,10 +479,11 @@ const recipes = [
       "Spread an even layer of icing on one of the cooled cakes and then place the other cake on top. Top the cake with the rest of the icing. Decorate with dairy-free chocolate buttons (or fresh berries if preferred).",
     ],
     serves: 12,
-    rating: 5,
+    rating: 4.4,
+    keyWords: ["rice milk", "flour", "salt", "sugar", "cocoa powder", "sunflower oil", "soda"],
   },
   {
-    title: "Prawns snack",
+    title: "Prawns & salmon snack",
     ingredients: [
       "3 baby gem lettuces",
       "300 g smoked salmon , from sustainable sources",
@@ -493,7 +509,8 @@ const recipes = [
       "Dress the lettuce and seafood generously with the cocktail sauce. Cut the lime into wedges and squeeze a little juice over each plate, drizzle over some oil and finish with a good grinding of black pepper.",
     ],
     serves: 6,
-    rating: 5,
+    rating: 4.5,
+    keyWords: ["prawns", "salmon", "ketchup", "mustard", "mayonnaise", "chilli sauce"],
   },
   {
     title: "Seared turmeric chicken",
@@ -525,12 +542,13 @@ const recipes = [
       "Serve the chicken with the couscous, peppers, greens and houmous or yoghurt, scattered with the hazelnuts and with a lemon wedge on the side. Nice with a drizzle of hot chilli sauce too.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.3,
+    keyWords: ["chicken", "hazelnuts", "couscous", "spinach", "homous", "tumeric", "red peppers", "chilli sauce"],
   },
   {
     title: "Winter daiquiri",
     ingredients: [
-      "50 ml Bacardi 8 Year Old Rum",
+      "50 ml Bacardi rum",
       "25 ml clementine juice",
       "1 tsp maple syrup",
       "cinnamon stick",
@@ -543,7 +561,8 @@ const recipes = [
       "Shake all the ingredients in a cocktail shaker with ice cubes, then strain into a cocktail glass. Crumble over the cinnamon stick to garnish.",
     ],
     serves: 1,
-    rating: 5,
+    rating: 4.6,
+    keyWords: ["rum", "syrup", "cinnamon", "juice"],
   },
   {
     title: "Chai martini",
@@ -562,7 +581,8 @@ const recipes = [
       "Pour into a handled coffee glass, then serve with the gingerbread biscuit on the side.",
     ],
     serves: 1,
-    rating: 5,
+    rating: 4.7,
+    keyWords: ["cognac", "honey", "chai tea", "honey"],
   },
 ];
 
@@ -571,7 +591,7 @@ mongoose
   .then(() => console.log("connected"))
   .catch((err) => console.log(er));
 
-Recipe.insertMany(recipes)
+Ingredients.insertMany(recipes)
   .then((documents) => {
     console.log(`Success" ${documents.length} recipes were added`);
     mongoose.connection.close();
