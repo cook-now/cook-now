@@ -1,6 +1,7 @@
 const express = require("express");
 const Recipe = require("../models/Recipe");
 const router = express.Router();
+const { loginCheck } = require('./middlewares');
 
 /* GET home page */
 router.get("/", (req, res, next) => {

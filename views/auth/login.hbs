@@ -1,0 +1,29 @@
+<div class="login-form">
+  <div class="login-container">
+    <h1>Login</h1>
+
+    {{#if message }}
+    <div class="alert alert-danger">{{ message }}</div>
+    {{/if}}
+
+    <form action="/auth/login" method="POST" id="form-container">
+      {{!-- <label for="username">Username</label> --}}
+      <input class="input" id="username" type="text" name="username" placeholder="Username">
+
+      <br><br>
+
+      {{!-- <label for="password">Password</label> --}}
+      <input class="input" id="password" type="password" name="password" placeholder="Your password">
+
+
+      <br><br>
+
+      <button class="button">Login</button>
+
+      <p class="account-message">
+        Don't have an account yet?
+        <a href="/auth/signup">Signup</a>
+      </p>
+    </form>
+  </div>
+</div>
