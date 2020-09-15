@@ -37,8 +37,6 @@ const schemaRecipe = new Schema({
   keyWords: {
     type: [],
     required: true
-  }
-    default: 0,
   },
 });
 
