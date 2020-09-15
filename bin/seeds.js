@@ -4,6 +4,8 @@ const Recipe = require("../models/Recipe");
 const recipes = [
   {
     title: "Potato wedges",
+    about:
+      "These chunky, peppery golden potato wedges are always a winner at parties and barbecues",
     ingredients: [
       "sea salt",
       "freshly ground black pepper",
@@ -20,10 +22,13 @@ const recipes = [
       "Transfer to a roasting tray and add a good lug of olive oil and a pinch of salt and pepper. Toss together so all the wedges are coated in the oil then spread out in one layer. Cook in the hot oven for 30 minutes until golden, crisp and cooked through. Delicious served with steak or chicken.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["potatoes", "olive oil"],
   },
   {
     title: "Asparagus & halloumi salad",
+    about:
+      "Summer is a time of plenty. Markets, gardens and allotments are overflowing with ripe tomatoes, peppers, courgettes, aubergines, peas, leeks and more – all at their absolute best. Whether tossed through pasta, thrown into salads or simply chargrilled as a side, celebrate all this glorious season has to offer.",
     ingredients: [
       "450 g asparagus",
       "250 g halloumi",
@@ -45,10 +50,13 @@ const recipes = [
       "Pour the dressing over the other ingredients, toss well and serve on a platter while the halloumi is still warm.",
     ],
     serves: 3,
-    rating: 4,
+    rating: 4.7,
+    keyWords: ["halloumi", "oranges", "onions", "asparagus"],
   },
   {
     title: "Italian baked eggs",
+    about:
+      "A delicious brunch at home is the perfect way to kick off the weekend. Stacks of golden waffles and pancakes, smoked salmon, crispy bacon, eggs all kinds of ways, and maybe even a cheeky cocktail (or two), brunch is a brilliant way to share a little joy.",
     ingredients: [
       "olive oil",
       "4 large free-range eggs",
@@ -69,10 +77,13 @@ const recipes = [
       "Pick over a few marjoram or basil leaves, and tuck in. Delicious served with hot buttered toast.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["eggs", "tomatoes", "mozzarella", "olive oil"],
   },
   {
-    title: "White chocolate & cranberry cookies",
+    title: "White chocolate cookies",
+    about:
+      "These chewy cookies, divvied out with an ice cream scoop, make the perfect receptacle for leftover nuts, dried fruit, toffees, chocolate and any other treats you might have hanging about. Vary the additions as you wish – just keep the total quantity to around 150g. If you prefer a crisper cookie, cook them for a couple more minutes.",
     ingredients: [
       "100 g unsalted butter",
       "85 g icing sugar",
@@ -95,10 +106,13 @@ const recipes = [
       "Carefully transfer the cookies onto a cooling rack and allow to cool and crisp a little before eating.",
     ],
     serves: 14,
-    rating: 4,
+    rating: 4.3,
+    keyWords: ["butter", "flour", "chocolate", "cranberries"],
   },
   {
     title: "Green shakshuka",
+    about:
+      "Shakshuka is Hebrew for 'all mixed up', and while it's traditionally a tomato-based dish, this twist freshens it up with spring greens while still holding on to those core Middle Eastern herbs and spices. Brilliant for brunch or dinner.",
     ingredients: [
       "4 spring onions",
       "1 clove of garlic",
@@ -129,10 +143,13 @@ const recipes = [
       "Pick and roughly chop the mint leaves and dill, then sprinkle over the eggs. Crumble over the feta and serve straight away.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.9,
+    keyWords: ["eggs", "onions", "feta cheese", "lemons"],
   },
   {
     title: "Chicken & garlic bread kebabs",
+    about:
+      "A genius kebab recipe combo of toasted garlic bread and juicy chicken.",
     ingredients: [
       "2 sprigs of fresh rosemary",
       "2 cloves of garlic",
@@ -160,10 +177,13 @@ const recipes = [
       "Meanwhile, top and tail the blood oranges, trim off the peel, then slice into rounds. Dress the spinach with a squeeze of lemon juice and a drizzle of oil, arrange on your plates with the blood oranges and drizzle with the balsamic. Top with the kebabs, crumble over the feta and serve with lemon wedges.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.8,
+    keyWords: ["chicken", "oranges", "feta cheese", "spinach"],
   },
   {
-    title: "Crêpes with banana & Greek yoghurt",
+    title: "Crêpes with banana & yoghurt",
+    about:
+      "This crêpe batter includes some yoghurt, which makes the flour more digestible when the batter is left to stand overnight; it also makes for silky textured pancakes.",
     ingredients: [
       "130 g flour",
       "300 ml whole milk",
@@ -190,10 +210,13 @@ const recipes = [
       "Spread each crêpe with some Greek yoghurt and add a spoonful of banana. Fold in half and fold again into quarters. Drizzle with a little honey or maple syrup to serve.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 4.6,
+    keyWords: ["flour", "honey", "milk", "yoghurt"],
   },
   {
     title: "Steaming ramen",
+    about:
+      "Ramen is all about investing time to make an incredible steamy broth, using cheaper cuts of meat and bones for maximum flavour. Like many humble foods, the original Chinese ramen (meaning noodle) really evolved with its introduction to Japan and Western culture, which allows us to have a bit of fun with it, aka contrasting flavours, pickles and garnishes. Feel free to bend this recipe seasonally – that’s the spirit of it. Kimchee is a fermented cabbage that tastes great – hunt it out in good supermarkets.",
     ingredients: [
       "8 higher-welfare chicken wings",
       "1 handful of pork bones , (ask your butcher)",
@@ -237,10 +260,13 @@ const recipes = [
       "Tear over the seaweed and divide up the kimchee. Drizzle with chilli oil, then break over the crackling. Slurp away!",
     ],
     serves: 8,
-    rating: 4,
+    rating: 4.1,
+    keyWords: ["chicken", "pork", "eggs", "noodles"],
   },
   {
     title: "Spinach & tortellini soup",
+    about:
+      "Everyone loves pasta – so treating it as your best friend and a vehicle for getting extra veg into meals is a really good way to approach things. Think of it as a principle, and flex the veg you use depending on what you’ve got in the fridge and the freezer.",
     ingredients: [
       "1 litre organic chicken or vegetable stock",
       "2 fresh bay leaves",
@@ -260,9 +286,12 @@ const recipes = [
     ],
     serves: 2,
     rating: 5,
+    keyWords: ["tortellini", "peas", "spinach"],
   },
   {
     title: "Cherry brownies",
+    about:
+      "These brownies can be whipped up in under an hour, and they are great on their own or with toppings – vanilla ice cream, toffee popcorn and toasted nuts are all great, but go mad and try any combo you can think of! The trick is to trust your oven and leave to cool completely before before slicing for that amazing crisp outside and gooey middle. Heaven!",
     ingredients: [
       "130 g butter",
       "150 g dark chocolate (70% cocoa solids)",
@@ -289,10 +318,13 @@ const recipes = [
       "Remove from the oven and cool in the tray, before cutting into squares.",
     ],
     serves: 16,
-    rating: 5,
+    rating: 4.8,
+    keyWords: ["chockolate", "eggs", "flour", "cherries", "pecans"],
   },
   {
     title: "Mexican-style steak",
+    about:
+      "Here’s a meaty treat inspired by Mexico to get your taste buds fired up – a nice juicy steak served with a fresh, crunchy salsa and an addictively rich satay-style sauce. Ask your butcher to cut you a thick, double steak so you can get it gnarly on the outside and blushing on the inside. You can amplify tenderness and keep it juicy by turning it regularly, trapping the moisture inside while building up a bark-like crust. Peel off the fat and use it to render your potatoes for a deliciously retro side. Get in!",
     ingredients: [
       "1 thick sirloin steak, (300g)",
       "1 Maris Piper potato, (300g)",
@@ -334,10 +366,12 @@ const recipes = [
       "Finish with a few dollops of salsa, a scattering of the reserved coriander, drizzle over any resting juices, then serve up with the crispy potatoes and tuck in.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.4,
+    keyWords: ["steak", "tequila", "limes", "garlic", "peanuts"],
   },
   {
     title: "Christmas pudding vodka",
+    about: "Make festive cocktails with this spicy vodka!",
     ingredients: [
       "1 piece of blade mace",
       "2 sticks of cinnamon",
@@ -361,10 +395,13 @@ const recipes = [
       "Decant the vodka into clean bottles and seal – this will store for up to one year, and can be served from the freezer or at room temperature.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["vodka", "cinnamon", "orange", "sugar"],
   },
   {
     title: "Watermelon glory",
+    about:
+      "It's really easy to make using fresh watermelon, lime and sugar. It's blended and then frozen for a refreshing, delicious and healthy summer treat.",
     ingredients: [
       "2 shots of golden rum",
       "400 g watermelon flesh",
@@ -381,12 +418,14 @@ const recipes = [
       "Pour into glasses and serve with extra slices of watermelon, if you like.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["rum", "watermelon"],
   },
   {
     title: "Margarita",
+    about: "Classic!",
     ingredients: [
-      "1 part Cazadores Tequila",
+      "1 part Cazadores tequila",
       "½ part triple sec liqueur",
       "1 whole lime, juiced",
       "1 a pinch of salt",
@@ -403,10 +442,13 @@ const recipes = [
       "Double strain the mix into the glass.",
     ],
     serves: 1,
-    rating: 5,
+    rating: 5.0,
+    keyWords: ["tequila", "limes", "salt"],
   },
   {
     title: "Pasta peperonata",
+    about:
+      "Everyone loves pasta – so treating it as your best friend and a vehicle for getting extra veg into meals is a really good way to approach things. Think of it as a principle, and flex the veg you use depending on what you’ve got in the fridge and the freezer.",
     ingredients: [
       "2 red peppers",
       "2 yellow peppers",
@@ -431,10 +473,13 @@ const recipes = [
       "Put the peppers, pasta and parsley leaves into a large warmed bowl. Give them a good toss together, then add a little of the pasta cooking water and a few good lugs of extra virgin olive oil to coat the pasta nicely. Serve straight away sprinkled with the rest of the Parmesan.",
     ],
     serves: 4,
-    rating: 5,
+    rating: 4.7,
+    keyWords: ["pepper", "onions", "garlic", "penne"],
   },
   {
     title: "Vegan chocolate cake",
+    about:
+      "You can also use this mixture to make 12 large cupcakes or 24 little ones, but remember to reduce the cooking time to 15 to 20 minutes. You can easily freeze these complete with icing and defrost an hour or so before they are needed.",
     ingredients: [
       "450 ml rice milk",
       "1 tablespoon cider vinegar",
@@ -464,10 +509,13 @@ const recipes = [
       "Spread an even layer of icing on one of the cooled cakes and then place the other cake on top. Top the cake with the rest of the icing. Decorate with dairy-free chocolate buttons (or fresh berries if preferred).",
     ],
     serves: 12,
-    rating: 5,
+    rating: 4.4,
+    keyWords: ["rice milk", "flour", "salt", "sugar", "cocoa powder"],
   },
   {
-    title: "Prawns snack",
+    title: "Prawns & salmon snack",
+    about:
+      "The 70s dinner party staple gets an update here, adding beautiful waves of smoked salmon to the story and a hit of lime, ginger and coriander to wake up your tastebuds.",
     ingredients: [
       "3 baby gem lettuces",
       "300 g smoked salmon , from sustainable sources",
@@ -493,10 +541,13 @@ const recipes = [
       "Dress the lettuce and seafood generously with the cocktail sauce. Cut the lime into wedges and squeeze a little juice over each plate, drizzle over some oil and finish with a good grinding of black pepper.",
     ],
     serves: 6,
-    rating: 5,
+    rating: 4.5,
+    keyWords: ["prawns", "salmon", "ketchup", "mustard"],
   },
   {
     title: "Seared turmeric chicken",
+    about:
+      "This easy-to-make healthy chicken recipe is super-tasty and perfect for two.",
     ingredients: [
       "200 g seasonal greens, such as baby spinach",
       "150 g wholewheat couscous",
@@ -525,12 +576,15 @@ const recipes = [
       "Serve the chicken with the couscous, peppers, greens and houmous or yoghurt, scattered with the hazelnuts and with a lemon wedge on the side. Nice with a drizzle of hot chilli sauce too.",
     ],
     serves: 2,
-    rating: 5,
+    rating: 4.3,
+    keyWords: ["chicken", "hazelnuts", "couscous", "spinach"],
   },
   {
     title: "Winter daiquiri",
+    about:
+      "A twist on a classic daiquiri – the mix of zingy clementines and maple syrup is incredible.",
     ingredients: [
-      "50 ml Bacardi 8 Year Old Rum",
+      "50 ml Bacardi rum",
       "25 ml clementine juice",
       "1 tsp maple syrup",
       "cinnamon stick",
@@ -543,10 +597,13 @@ const recipes = [
       "Shake all the ingredients in a cocktail shaker with ice cubes, then strain into a cocktail glass. Crumble over the cinnamon stick to garnish.",
     ],
     serves: 1,
-    rating: 5,
+    rating: 4.6,
+    keyWords: ["rum", "syrup", "cinnamon"],
   },
   {
     title: "Chai martini",
+    about:
+      "Two lovely wintery things come together – tea and brandy – to make a great warming cocktail.",
     ingredients: [
       "100 ml chai tea",
       "50 ml cognac",
@@ -562,7 +619,8 @@ const recipes = [
       "Pour into a handled coffee glass, then serve with the gingerbread biscuit on the side.",
     ],
     serves: 1,
-    rating: 5,
+    rating: 4.7,
+    keyWords: ["cognac", "honey", "tea"],
   },
 ];
 
