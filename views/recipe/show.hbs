@@ -1,17 +1,98 @@
-<h1>{{recipe.title}}</h1>
-<img src="{{recipe.image}}" alt="Image for {{recipe.image}}">
-<h3>Categorie: {{recipe.categories}}</h3>
-<h4>Preparation time: {{recipe.preparationTime}} mins</h4>
-<h3>Ingredients:</h3>
-{{#each recipe.ingredients}}
-<li>{{this}}</li>
-{{/each}}
-<ol>
-<h3>Methods:</h3>
-{{#each recipe.description}}
-<li>{{this}}</li>
-{{/each}}
-</ol>
+<div class="recipe-detail-header">
+  {{!-- for header img --}}
+</div>
 
-<h4>Serves: {{recipe.serves}}</h4>
-<h4>Rating: {{recipe.rating}}</h4>
+
+<div class="container-fluid recipe-layout-container">
+
+
+  <div class="recipe-layout-top row">
+
+    <div class="recipe-img-container col-md-5 recipe-img-container-detail">
+      <img src="{{recipe.image}}" alt="recipe-image" class="recipe-img" height="500">
+    </div>
+
+    <div class="recipe-layout col-md-7">
+
+      <div class="row align-items-center justify-content-between recipe-title">
+        <h1>{{recipe.title}}</h1>
+      </div>
+
+      <div class="row d-flex align-items-center mb-5">
+        <div class="recipe-lines">
+          <span class="dish-tag-1">{{recipe.categories}}</span>
+        </div>
+
+        <div class="verticalLine"></div>
+        <div class="recipe-line">
+          <span>cooks in <strong>{{recipe.preparationTime}} min</strong></span>
+        </div>
+
+        <div class="verticalLine"></div>
+        <div class="recipe-line">
+          <span>serves <strong>{{recipe.serves}}</strong></span>
+        </div>
+      </div>
+
+      <div class="row my-5" style="text-decoration: none; color:black; font-weight: bold;">
+        {{!-- <div class="col-6 p-0"> --}}
+        <h6 class="strong">About:</h6>
+        <p>{{recipe.about}}</p>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="form-row recipe-layout-bottom">
+    <div class="col-md-4 my-md-5">
+
+      <h3>What you need: </h3>
+
+      <ul>
+        {{#each recipe.ingredients}}
+        <div class="my-3" id="ingredient-display">
+          <li>{{this}}</li>
+          {{!-- <li>{{this.qty}} <span>{{this.unit}}</span> <span>{{this.name}}</span></li> --}}
+        </div>
+        {{/each}}
+
+      </ul>
+
+    </div>
+
+    <div id="method" class="container col-md-7 mt-5 mb-md-4">
+      <h3>How to cook:</h3>
+
+      <ol>
+
+        {{#each recipe.description}}
+        <div class="my-4">
+          <li>{{this}}</li>
+        </div>
+        {{/each}}
+
+      </ol>
+
+    </div>
+
+    {{!-- <h1>{{recipe.title}}</h1>
+      <img src="{{recipe.image}}" alt="Image for {{recipe.image}}">
+      <h3>Categorie: {{recipe.categories}}</h3>
+      <h4>Preparation time: {{recipe.preparationTime}} mins</h4>
+      <h3>Ingredients:</h3>
+      {{#each recipe.ingredients}}
+      <li>{{this}}</li>
+      {{/each}}
+      <ol>
+        <h3>Methods:</h3>
+        {{#each recipe.description}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ol>
+
+      <h4>Serves: {{recipe.serves}}</h4>
+      <h4>Rating: {{recipe.rating}}</h4> --}}
+  </div>
+
+  <a href="/">Go back to the recipes</a>
