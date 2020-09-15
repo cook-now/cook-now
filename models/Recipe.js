@@ -4,30 +4,31 @@ const Schema = mongoose.Schema;
 const schemaRecipe = new Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
+  about: { type: String },
   ingredients: {
     type: [],
-    required: true
+    required: true,
   },
   categories: {
     type: String,
-    required: true
+    required: true,
   },
   image: {
-    type: String
+    type: String,
   },
   preparationTime: {
     type: Number,
-    required: true
+    required: true,
   },
   description: {
     type: [],
-    required: true
+    required: true,
   },
   serves: {
     type: Number,
-    required: true
+    required: true,
   },
   rating: {
     type: Number,
@@ -37,6 +38,8 @@ const schemaRecipe = new Schema({
     type: [],
     required: true
   }
+    default: 0,
+  },
 });
 
 const Recipe = mongoose.model("Recipe", schemaRecipe);

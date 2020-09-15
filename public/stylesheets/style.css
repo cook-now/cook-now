@@ -1,5 +1,6 @@
 body {
-  font-family: "Merriweather";
+  font-family: "Space Mono", monospace;
+  background-color: beige;
   position: relative;
   min-height: 100vh;
   padding-bottom: 4rem; }
@@ -28,11 +29,11 @@ body {
   justify-content: flex-start;
   align-items: center; }
   .top-home .title-home {
-    font-family: "Muli";
     color: white;
     margin-left: 10vw; }
     .top-home .title-home h1 {
-      font-size: 3rem; }
+      font-family: "Libre Baskerville", cursive;
+      font-size: 5.5rem; }
     .top-home .title-home h2 {
       font-size: 2rem; }
     .top-home .title-home p {
@@ -52,7 +53,8 @@ body {
     width: 7%;
     height: 7%; }
   .title a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: black; }
   .title a:hover {
     color: gray; }
 
@@ -85,8 +87,37 @@ body {
 
 .verticalLine {
   border-left: 2px solid #f2bf35;
+  opacity: 0.3;
   height: 40px;
   margin: 0 2vw; }
+
+.recipe-details-header {
+  background-image: url("../images/header-create-recipe.jpg");
+  background-size: cover;
+  height: 11rem; }
+
+.recipe-layout-container {
+  margin-top: 5vw;
+  margin-bottom: 1rem;
+  padding-left: 9vw;
+  padding-right: 10vw; }
+  .recipe-layout-container .recipe-layout {
+    padding: 4vh 4vw; }
+    .recipe-layout-container .recipe-layout .recipe-title {
+      text-justify: center;
+      padding-bottom: 2vh; }
+  .recipe-layout-container .recipe-img-container {
+    background-color: #dadada;
+    margin-bottom: 2rem;
+    padding: 0; }
+    .recipe-layout-container .recipe-img-container img {
+      width: 100%; }
+  .recipe-layout-container .recipe-img-container-detail {
+    background-color: white; }
+    .recipe-layout-container .recipe-img-container-detail img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
 
 @media (min-aspect-ratio: 16 / 9) {
   .fullscreen-bg__video {

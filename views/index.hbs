@@ -1,7 +1,10 @@
 <div class="fullscreen-bg">
-  <video loop muted autoplay poster="../images/bg-home.png" class="fullscreen-bg__video">
+  <video loop muted autoplay class="fullscreen-bg__video">
     <source src="../images/cook.mp4" type="video/mp4">
   </video>
+  {{!-- <video loop muted autoplay poster="../images/bg-home.png" class="fullscreen-bg__video">
+    <source src="../images/cook.mp4" type="video/mp4">
+  </video> --}}
 </div>
 
 <div class="top-home">
@@ -14,22 +17,19 @@
     <p>CookNow is an app which matches ingredients in your fridge with<br>
       the recipe database to find a perfect match for your dinner plans.</p>
     <br>
-    {{!-- {{#if loggedIn}} --}} {{!-- <a class="btn btn-outline-info" href="/recipe/create">Create Recipe</a> --}}
-    {{!-- {{else}} --}} <a class="btn btn-outline-danger" href="/auth/signup">Create your account</a>
-    {{!-- {{/if}} --}}
+    <a class="btn btn-outline-danger" href="/auth/signup">Create your account</a>
   </div>
 </div>
 
 <br>
 <div class="title">
-  {{!-- <h1>Popular Recipes</h1> --}}
 </div>
 <div class="flex-container">
   {{#each recipes}}
   <div class="each-recipe">
     <a href="/recipes/{{_id}}">
       <img src="{{image}}">
-      <p>{{title}}</p>
+      <p>{{title}} | {{rating}}⋆</p>
     </a>
   </div>
   {{/each}}
