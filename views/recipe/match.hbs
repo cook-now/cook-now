@@ -1,6 +1,8 @@
-<h1>{{recipe.title}}</h1>
-<img src="{{recipe.image}}" alt="Image for {{recipe.image}}">
-<h3>Categorie: {{recipe.categories}}</h3>
-<h4>Preparation time: {{recipe.preparationTime}} mins</h4>
-<h4>Serves: {{recipe.serves}}</h4>
-<h4>Rating: {{recipe.rating}}</h4>
+{{#each recipes}}
+<h1>{{this.title}}</h1>
+<img src="{{this.image}}" alt="Image for {{this.image}}">
+<h3>Categorie: {{this.categories}}</h3>
+<h4>Preparation time: {{this.preparationTime}} mins</h4>
+<h4>Serves: {{this.serves}}</h4>
+<h4>Rating: {{this.rating}}</h4>
+{{/each}}

@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
 const Ingredient = require("../models/Ingredient");
 
-const ingredients = [
-  {
+const ingredients = {
     name: [
     "potatoes", "asparagus", "onions",  "spinach", "peas", "onion",  "garlic", 
     "kimchee", "seasonal greens", "red peppers", "yellow peppers", "green pappers", 
@@ -14,8 +13,7 @@ const ingredients = [
     "yoghurt",  "mirin", "vinegar", "noodles", "penne", "tortellini", "couscous",  "miso paste", "rice milk", "salt", "pepper", "sugar", "cumin",
     "coriander", "oregano", "dill", "rosemary", "vinegar", "pepper", "cinnamon", "spice", "thyme", "mace", "anise", "chai", "chipotle chilli", "currants"
     ]
-  }
-]
+}
 
 mongoose
   .connect("mongodb://localhost/cook-now")
