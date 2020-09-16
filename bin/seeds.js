@@ -23,7 +23,7 @@ const recipes = [
     ],
     serves: 4,
     rating: 5.0,
-    keyWords: ["black paper", "potatoes", "olive oil"],
+    keyWords: ["potatoes", "olive oil"],
   },
   {
     title: "Asparagus & halloumi salad",
@@ -107,7 +107,7 @@ const recipes = [
     ],
     serves: 14,
     rating: 4.3,
-    keyWords: ["sugar", "butter", "flour", "chocolate", "cranberries"],
+    keyWords: ["butter", "flour", "chocolate", "cranberries"],
   },
   {
     title: "Green shakshuka",
@@ -419,7 +419,7 @@ const recipes = [
     ],
     serves: 2,
     rating: 5.0,
-    keyWords: ["rum", "vanilla", "watermelon"],
+    keyWords: ["rum", "watermelon"],
   },
   {
     title: "Margarita",
@@ -443,7 +443,7 @@ const recipes = [
     ],
     serves: 1,
     rating: 5.0,
-    keyWords: ["liquer","tequila", "limes", "salt"],
+    keyWords: ["tequila", "limes", "salt"],
   },
   {
     title: "Pasta peperonata",
@@ -474,7 +474,7 @@ const recipes = [
     ],
     serves: 4,
     rating: 4.7,
-    keyWords: ["pepper", "onions", "garlic", "penne", "vinegar"],
+    keyWords: ["pepper", "onions", "garlic", "penne"],
   },
   {
     title: "Vegan chocolate cake",
@@ -510,10 +510,7 @@ const recipes = [
     ],
     serves: 12,
     rating: 4.4,
-    keyWords: ["rice milk", "flour", "salt", "sugar", "cocoa powder", "sunflower oil", "soda"],
-  },
-  {
-    title: "Prawns & salmon snack",
+    keyWords: ["rice milk", "flour", "salt", "sugar", "cocoa powder"],
   },
   {
     title: "Prawns & salmon snack",
@@ -545,7 +542,7 @@ const recipes = [
     ],
     serves: 6,
     rating: 4.5,
-    keyWords: ["prawns", "salmon", "ketchup", "mustard", "mayonnaise", "chilli sauce"],
+    keyWords: ["prawns", "salmon", "ketchup", "mustard"],
   },
   {
     title: "Seared turmeric chicken",
@@ -580,7 +577,7 @@ const recipes = [
     ],
     serves: 2,
     rating: 4.3,
-    keyWords: ["chicken", "hazelnuts", "couscous", "spinach", "homous", "tumeric", "red peppers", "chilli sauce"],
+    keyWords: ["chicken", "hazelnuts", "couscous", "spinach"],
   },
   {
     title: "Winter daiquiri",
@@ -601,7 +598,7 @@ const recipes = [
     ],
     serves: 1,
     rating: 4.6,
-    keyWords: ["rum", "syrup", "cinnamon", "juice"],
+    keyWords: ["rum", "syrup", "cinnamon"],
   },
   {
     title: "Chai martini",
@@ -623,7 +620,7 @@ const recipes = [
     ],
     serves: 1,
     rating: 4.7,
-    keyWords: ["cognac", "honey", "chai tea", "honey"],
+    keyWords: ["cognac", "honey", "tea"],
   },
 ];
 
@@ -632,7 +629,7 @@ mongoose
   .then(() => console.log("connected"))
   .catch((err) => console.log(er));
 
-Ingredients.insertMany(recipes)
+Recipe.insertMany(recipes)
   .then((documents) => {
     console.log(`Success" ${documents.length} recipes were added`);
     mongoose.connection.close();

@@ -4,7 +4,7 @@
 
 body {
   font-family: "Space Mono", monospace;
-  background-color: beige;
+  background-color: #f5f5dc;
   position: relative;
   min-height: 100vh;
   padding-bottom: 4rem; }
@@ -31,8 +31,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .nav-menu .navbar-brand {
-    font-size: 1.5rem; }
 
 .top-home {
   height: 75vh;
@@ -53,7 +51,6 @@ body {
       border: none; }
 
 .title {
-  padding: 1vh 1vw;
   display: flex; }
   .title img {
     border-radius: 50%;
@@ -68,11 +65,10 @@ body {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 5vh 0;
+  justify-content: flex-start;
   padding-left: 3vw; }
   .flex-container .each-recipe {
     width: 17vw;
-    height: 25vw;
     text-align: center;
     margin: 0 2vw 5vh 0;
     background-color: #f2bf35; }
@@ -85,8 +81,6 @@ body {
       margin-top: 12px;
       color: black;
       font-size: 1.1rem; }
-  .flex-container a {
-    text-decoration: none; }
   .flex-container .each-recipe:hover {
     background-color: #faeeab; }
     .flex-container .each-recipe:hover a {
@@ -97,6 +91,9 @@ body {
   opacity: 0.3;
   height: 40px;
   margin: 0 2vw; }
+
+.recipe-img {
+  width: 100%; }
 
 .recipe-layout-container {
   margin-top: 5vw;
@@ -114,12 +111,76 @@ body {
     padding: 0; }
     .recipe-layout-container .recipe-img-container img {
       width: 100%; }
-  .recipe-layout-container .recipe-img-container-detail {
-    background-color: white; }
-    .recipe-layout-container .recipe-img-container-detail img {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); }
+  .recipe-layout-container .recipe-img-container-detail img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.login-form {
+  background-image: url("../images/bg-home.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  color: black; }
+  .login-form .login-container {
+    padding-top: 10vh;
+    padding-left: 0vw;
+    margin: 0; }
+  .login-form .input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #f2bf35;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 25px;
+    transition: 0.5s; }
+  .login-form .input:focus {
+    width: 280px;
+    border-color: #f2bf35; }
+  .login-form .button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto 10px;
+    text-align: center;
+    border: 2px solid #f2bf35;
+    padding: 14px 2vw;
+    outline: none;
+    color: black;
+    background-color: #f2bf35;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s; }
+  .login-form .button:hover {
+    background: #f5f5dc; }
+
+.food-form .food-container {
+  padding-left: 1vw; }
+
+.food-form button {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+  border: 2px solid #dc3545;
+  padding: 14px 2vw;
+  outline: none;
+  color: #dc3545;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.5s; }
+
+.food-form button:hover {
+  background: #ff4c45;
+  color: white; }
 
 @media (min-aspect-ratio: 16 / 9) {
   .fullscreen-bg__video {
@@ -130,5 +191,42 @@ body {
   .fullscreen-bg__video {
     width: auto;
     height: 100%; } }
+
+@media (max-width: 576px) {
+  .flex-container {
+    justify-content: start;
+    margin-left: 2vw; }
+    .flex-container .each-recipe {
+      display: inline-block;
+      width: 45%;
+      width: 45vw; }
+      .flex-container .each-recipe img {
+        height: 45vw; }
+  .login-form {
+    height: 80vh; }
+  .login-form > .login-container {
+    width: 100vw;
+    padding: 10vw; }
+  .top-home {
+    background-image: url("../images/bg-home3.jpg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-start; }
+    .top-home .title-home {
+      height: 50vh;
+      margin-left: 10vw; }
+      .top-home .title-home h1 {
+        font-size: 1.8rem; }
+      .top-home .title-home h2 {
+        font-size: 1.2rem; }
+      .top-home .title-home p {
+        display: none; }
+  .search-header {
+    padding-right: 10vw; }
+  .title > img {
+    border-radius: 50%;
+    width: 25%;
+    margin-left: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

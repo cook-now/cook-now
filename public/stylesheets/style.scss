@@ -5,12 +5,14 @@
 
 body {
   font-family: "Space Mono", monospace;
-  background-color: beige;
+  background-color: #f5f5dc;
 
   position: relative;
   min-height: 100vh;
   padding-bottom: 4rem;
 }
+
+// video
 
 .fullscreen-bg {
   height: 80vh;
@@ -32,23 +34,20 @@ body {
   filter: brightness(70%);
 }
 
+// home page
+
 .nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .navbar-brand {
-    // margin-bottom: 3px;
-    font-size: 1.5rem;
-  }
 }
 
 .top-home {
   height: 75vh;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  // text-align: center;
 
   .title-home {
     color: white;
@@ -63,11 +62,6 @@ body {
     p {
       font-size: 1.1rem;
     }
-    // a {
-    //   color: white;
-    //   border-color: white;
-    //   font-size: 1.1rem;
-    // }
     a:hover {
       border: none;
     }
@@ -75,7 +69,7 @@ body {
 }
 
 .title {
-  padding: 1vh 1vw;
+  // padding: 5vh 2vw 0;
   display: flex;
   img {
     border-radius: 50%;
@@ -94,14 +88,14 @@ body {
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
+  justify-content: flex-start;
 
-  padding: 5vh 0;
+  // padding: 5vh 0;
   padding-left: 3vw;
 
   .each-recipe {
     width: 17vw;
-    height: 25vw;
+    // height: 25vw;
 
     text-align: center;
     margin: 0 2vw 5vh 0;
@@ -109,6 +103,7 @@ body {
     background-color: #f2bf35;
 
     img {
+      // border-radius: 25px;
       object-fit: cover;
       object-position: center;
       width: 100%;
@@ -120,19 +115,14 @@ body {
       font-size: 1.1rem;
     }
   }
-
-  a {
-    text-decoration: none;
-  }
-
   .each-recipe:hover {
     background-color: #faeeab;
-
     a {
       text-decoration: none;
     }
   }
 }
+
 .verticalLine {
   border-left: 2px solid #f2bf35;
   opacity: 0.3;
@@ -140,17 +130,17 @@ body {
   margin: 0 2vw;
 }
 
-// recipes-view
+.recipe-img {
+  width: 100%;
+}
+
+// show recipe
 
 .recipe-layout-container {
   margin-top: 5vw;
   margin-bottom: 1rem;
   padding-left: 9vw;
   padding-right: 10vw;
-
-  h3 {
-    // font-style: bold;
-  }
   .recipe-layout {
     padding: 4vh 4vw;
     .recipe-title {
@@ -164,12 +154,13 @@ body {
     margin-bottom: 2rem;
     padding: 0;
     img {
+      // border-radius: 25px;
       width: 100%;
     }
   }
 
   .recipe-img-container-detail {
-    background-color: white;
+    // background-color: white;
     img {
       position: relative;
       top: 50%;
@@ -178,7 +169,114 @@ body {
   }
 }
 
-//
+// login page
+
+.login-form {
+  background-image: url("../images/bg-home.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+  text-align: center;
+  color: black;
+
+  .login-container {
+    // width: 40vw;
+    padding-top: 10vh;
+    padding-left: 0vw;
+    margin: 0;
+  }
+
+  .input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #f2bf35;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 25px;
+    transition: 0.5s;
+  }
+
+  .input:focus {
+    width: 280px;
+    border-color: #f2bf35;
+  }
+
+  .button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto 10px;
+    text-align: center;
+    border: 2px solid #f2bf35;
+    padding: 14px 2vw;
+    outline: none;
+    color: black;
+    background-color: #f2bf35;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .button:hover {
+    background: #f5f5dc;
+    // color: white;
+  }
+}
+
+// signup page - same logic
+
+// my fridge
+
+.food-form {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: flex-start;
+
+  .food-container {
+    // padding-top: 10vh;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
+
+    padding-left: 1vw;
+    // margin: 0;
+  }
+
+  button {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0 auto 10px;
+    text-align: center;
+    border: 2px solid #dc3545;
+    padding: 14px 2vw;
+    outline: none;
+    color: #dc3545;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  // #f2bf35
+
+  button:hover {
+    background: #ff4c45;
+    color: white;
+    // background: #f5f5dc;
+    // text-decoration: none;
+    // color: white;
+  }
+}
+
+// media video
 
 @media (min-aspect-ratio: 16/9) {
   .fullscreen-bg__video {
@@ -191,5 +289,68 @@ body {
   .fullscreen-bg__video {
     width: auto;
     height: 100%;
+  }
+}
+
+// media responsive
+
+// @media (min-width: 576px) {
+//   #ingredient-display {
+//     padding-right: 30%;
+//   }
+// }
+
+@media (max-width: 576px) {
+  .flex-container {
+    justify-content: start;
+    margin-left: 2vw;
+    .each-recipe {
+      display: inline-block;
+      width: 45%;
+      width: 45vw;
+      img {
+        height: 45vw;
+      }
+    }
+  }
+
+  .login-form {
+    height: 80vh;
+  }
+
+  .login-form > .login-container {
+    width: 100vw;
+    padding: 10vw;
+  }
+
+  .top-home {
+    background-image: url("../images/bg-home3.jpg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-start;
+    .title-home {
+      height: 50vh;
+      margin-left: 10vw;
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .search-header {
+    padding-right: 10vw;
+  }
+
+  .title > img {
+    border-radius: 50%;
+    width: 25%;
+    margin-left: 10px;
   }
 }

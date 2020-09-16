@@ -4,7 +4,7 @@
   <div class="recipe-layout-top row">
 
     <div class="recipe-img-container col-md-5 recipe-img-container-detail">
-      <img src="{{recipe.image}}" alt="recipe-image" class="recipe-img" height="500">
+      <img src="{{recipe.image}}" alt="recipe-image" class="recipe-img">
     </div>
 
     <div class="recipe-layout col-md-7">
@@ -27,6 +27,7 @@
         <div class="recipe-line">
           <span>serves <strong>{{recipe.serves}}</strong></span>
         </div>
+
       </div>
 
       <div class="row my-5" style="text-decoration: none; color:black; font-weight: bold;">
@@ -70,4 +71,5 @@
 
   </div>
 
-  <a class="btn btn-primary" href="/">Go back to the recipes</a>
+  <a class="btn btn-warning" href="/">Go back</a>
+  {{!-- <a href="/">Go back to the recipes</a> --}}
