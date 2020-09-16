@@ -1,12 +1,32 @@
-<h1>My Fridge</h1>
+<br>
+<h2>My Fridge</h2>
+<style type="text/css">
+  h2 {
+    color: black;
+    padding: 10px 5px 15px 20px;
+  }
+</style>
+<br>
 
-<div class="container">
-  <form action="/ingredients" method="POST">
-  {{#each ingredients}}
-  {{#each name}}
-   <label class="p-2"> <input type="checkbox" id="checkbox_id" name="keywords" value="{{this}}">{{this}}</label>
-  {{/each}}
-  {{/each}}
-  <a href="/recipe/match"><button type="submit">Match</button></a>
-   </form>
+<div class="food-form">
+
+  <div class="food-container">
+    <form action="/ingredients" method="POST">
+      {{#each ingredients}}
+      {{#each name}}
+      <label class="p-2">
+        <input type="checkbox" id="checkbox_id" name="keywords" value="{{this}}"> {{this}}
+      </label>
+      {{/each}}
+      {{/each}}
+      <br>
+      <br>
+      <button class="button">Match</button>
+    </form>
+  </div>
+
 </div>
+
+{{!-- <a href="/recipe/match"><button type="submit">Match</button></a> --}}
+{{!-- <button class="button">Login</button>
+<a href="/recipe/match">Match</a> --}}

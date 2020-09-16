@@ -1,8 +1,8 @@
 <div class="login-form">
   <div class="login-container">
     <h1>Signup</h1>
-
-    <form action="/auth/signup" method="POST" id="form-container">
+    <br>
+    <form action="/auth/signup" method="POST" id="form-container" enctype="multipart/form-data">
 
       {{#if message }}
       <div class="alert alert-danger">{{ message }}</div>
@@ -15,14 +15,13 @@
       <br><br>
       <input class="input" id="password" type="password" name="password" placeholder="Password | min. 6 char">
 
-      <input type="submit" value="Submit">
+
+      <br><br>
+      <button class="button">Create account</button>
 
 
-      <br><br><br>
-      {{!-- <button class="button">Create account</button> --}}
-      <br>
       <p class="account-message">
-        Do you already have an account?
+        What is in your fridge?
         <a href="/auth/login">Login</a>
       </p>
     </form>
