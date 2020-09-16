@@ -1,8 +1,3 @@
-<div class="recipe-detail-header">
-  {{!-- for header img --}}
-</div>
-
-
 <div class="container-fluid recipe-layout-container">
 
 
@@ -35,11 +30,9 @@
       </div>
 
       <div class="row my-5" style="text-decoration: none; color:black; font-weight: bold;">
-        {{!-- <div class="col-6 p-0"> --}}
         <h6 class="strong">About:</h6>
         <p>{{recipe.about}}</p>
       </div>
-
 
     </div>
   </div>
@@ -53,7 +46,6 @@
         {{#each recipe.ingredients}}
         <div class="my-3" id="ingredient-display">
           <li>{{this}}</li>
-          {{!-- <li>{{this.qty}} <span>{{this.unit}}</span> <span>{{this.name}}</span></li> --}}
         </div>
         {{/each}}
 
@@ -76,23 +68,6 @@
 
     </div>
 
-    {{!-- <h1>{{recipe.title}}</h1>
-      <img src="{{recipe.image}}" alt="Image for {{recipe.image}}">
-      <h3>Categorie: {{recipe.categories}}</h3>
-      <h4>Preparation time: {{recipe.preparationTime}} mins</h4>
-      <h3>Ingredients:</h3>
-      {{#each recipe.ingredients}}
-      <li>{{this}}</li>
-      {{/each}}
-      <ol>
-        <h3>Methods:</h3>
-        {{#each recipe.description}}
-        <li>{{this}}</li>
-        {{/each}}
-      </ol>
-
-      <h4>Serves: {{recipe.serves}}</h4>
-      <h4>Rating: {{recipe.rating}}</h4> --}}
   </div>
 
-  <a href="/">Go back to the recipes</a>
+  <a class="btn btn-primary" href="/">Go back to the recipes</a>

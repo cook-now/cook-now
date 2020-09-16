@@ -2,9 +2,6 @@
   <video loop muted autoplay class="fullscreen-bg__video">
     <source src="../images/cook.mp4" type="video/mp4">
   </video>
-  {{!-- <video loop muted autoplay poster="../images/bg-home.png" class="fullscreen-bg__video">
-    <source src="../images/cook.mp4" type="video/mp4">
-  </video> --}}
 </div>
 
 <div class="top-home">
@@ -17,11 +14,16 @@
     <p>CookNow is an app which matches ingredients in your fridge with<br>
       the recipe database to find a perfect match for your dinner plans.</p>
     <br>
-    <a class="btn btn-outline-danger" href="/auth/signup">Create your account</a>
+    {{#if loggedIn}}
+    <a class="btn btn-warning" href="/ingredients">What is in my fridge?</a>
+    {{else}}
+    <a class="btn btn-danger" href="/auth/signup">Create your account</a>
+    {{/if}}
   </div>
 </div>
 
 <br>
+
 <div class="title">
 </div>
 <div class="flex-container">
