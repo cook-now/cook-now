@@ -9,7 +9,16 @@ const schemaUser = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  githubId: {
+    type: String
+  },
+  likedRecipes: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Recipe"
+    }
+  ],
 });
 
 const User = mongoose.model("User", schemaUser);

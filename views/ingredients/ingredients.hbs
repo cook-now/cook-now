@@ -4,8 +4,7 @@
   <form action="/ingredients" method="POST">
   {{#each ingredients}}
   {{#each name}}
-    <input type="checkbox" id="name" name="keywords" value="{{this}}">
-    <label for="ingredients">{{this}}</label><br>
+   <label class="p-2"> <input type="checkbox" id="checkbox_id" name="keywords" value="{{this}}">{{this}}</label>
   {{/each}}
   {{/each}}
   <a href="/recipe/match"><button type="submit">Match</button></a>

@@ -33,6 +33,31 @@
         <h6 class="strong">About:</h6>
         <p>{{recipe.about}}</p>
       </div>
+          {{#if loggedIn}}
+          {{!-- {{#if isSameUser}}
+          <div class="row pt-4">
+            <h5 id="likes"><span style="color:#DC3545">&#9829; </span>{{recipe.likes}} Likes</h5>
+          </div>
+          {{/if}}
+          {{#unless isSameUser}}
+          {{#if isLiking}} --}}
+          <div class="row">
+            <h6 id="likes"><button id="like-btn" value={{recipe._id}} type="button">{{recipe.likes}}</button> Likes</h6>
+          </div>
+          {{!-- <div class="row">
+            <button class="btn btn-danger" id="like-button" title="Like and save the recipe">
+              <span id="like-span">&#9829; Like</span>
+            </button>
+          </div>
+          {{else}}
+          <div class="row">
+            <button class="btn btn-outline-danger" id="like-button" title="Like and save the recipe">
+              <span id="like-span">&#9829; Like</span>
+            </button>
+          </div>
+          {{/if}}
+          {{/unless}} --}}
+          {{/if}}
 
     </div>
   </div>
@@ -70,4 +95,15 @@
 
   </div>
 
+
   <a class="btn btn-primary" href="/">Go back to the recipes</a>
+
+  <script>
+    let likeBtn = document.getElementById("like-btn")
+
+    likeBtn.addEventListener("click", (event) => {
+      axios.post(`/favorite/${event.target.value}`)
+      //console.log(event.target.value)
+    })
+
+  </script>

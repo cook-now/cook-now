@@ -7,10 +7,14 @@ const { loginCheck } = require('./middlewares');
 router.get("/", (req, res, next) => {
   Recipe.find({})
   .then((recipes) => {
-    res.render("index", { recipes })
+    res.render("index", { recipes });
     }).catch((err) => {
     console.log(err);
 });
+})
+
+router.get('/private', loginCheck(), (req, res) => {
+  res.render('private');
 });
 
 module.exports = router;
