@@ -1,8 +1,28 @@
-{{#each recipes}}
+<br>
+<h2>Look what you can cook!</h2>
+<style type="text/css">
+  h2 {
+    color: black;
+    padding: 10px 5px 15px 20px;
+  }
+</style>
+<br>
+<div class="flex-container">
+  {{#each recipes}}
+  <div class="each-recipe">
+    <a href="/recipes/{{_id}}">
+      <img src="{{image}}">
+      <p>{{title}} | {{rating}}⋆</p>
+    </a>
+  </div>
+  {{/each}}
+</div>
+
+{{!-- {{#each recipes}}
 <h1>{{this.title}}</h1>
 <img src="{{this.image}}" alt="Image for {{this.image}}">
 <h3>Categorie: {{this.categories}}</h3>
 <h4>Preparation time: {{this.preparationTime}} mins</h4>
 <h4>Serves: {{this.serves}}</h4>
 <h4>Rating: {{this.rating}}</h4>
-{{/each}}
+{{/each}} --}}

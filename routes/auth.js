@@ -8,33 +8,34 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 router.get("/login", (req, res, next) => {
-  res.render("auth/login"
-  // , { message: req.flash("error") }
+  res.render(
+    "auth/login"
+    // , { message: req.flash("error") }
   );
 });
 
 router.post(
-  '/login',
-  passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login',
-    passReqToCallback: true
+  "/login",
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/login",
+    passReqToCallback: true,
   })
-)
+);
 
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
 router.post("/signup", (req, res, next) => {
-  console.log("hello?", req.body)
+  console.log("hello?", req.body);
   const username = req.body.username;
   const password = req.body.password;
 
   if (username === "" || password === "") {
     res.render("auth/signup", {
       message: "Please fill in both username and password field",
-      usernameInput: username
+      usernameInput: username,
     });
     return;
   }
@@ -45,7 +46,7 @@ router.post("/signup", (req, res, next) => {
   if (!isValidUserName) {
     res.render("auth/signup", {
       message: "Username can only include english letters or numbers",
-      usernameInput: username
+      usernameInput: username,
     });
     return;
   }
@@ -53,7 +54,7 @@ router.post("/signup", (req, res, next) => {
   if (username.length < 3 || username.length > 15) {
     res.render("auth/signup", {
       message: "The length of username should be 3 - 15 characters",
-      usernameInput: username
+      usernameInput: username,
     });
     return;
   }
@@ -61,7 +62,7 @@ router.post("/signup", (req, res, next) => {
   if (password.length < 6) {
     res.render("auth/signup", {
       message: "The password should contain at least 6 characters",
-      usernameInput: username
+      usernameInput: username,
     });
     return;
   }
@@ -70,7 +71,7 @@ router.post("/signup", (req, res, next) => {
     if (user !== null) {
       res.render("auth/signup", {
         message: "This username already exists",
-        usernameInput: username
+        usernameInput: username,
       });
       return;
     }
@@ -86,9 +87,9 @@ router.post("/signup", (req, res, next) => {
     newUser
       .save()
       .then(() => {
-        res.redirect("/auth/login");
+        res.redirect("/ingredients");
       })
-      .catch(err => {
+      .catch((err) => {
         res.render("auth/signup", { message: "Something went wrong" });
       });
   });
