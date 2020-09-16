@@ -8,29 +8,40 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 router.get("/login", (req, res, next) => {
-  res.render(
-    "auth/login"
-    // , { message: req.flash("error") }
-  );
+  res.render("auth/login")
+  // { message: req.flash("error") 
+
 });
 
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/login",
-    passReqToCallback: true,
+    successRedirect: "/ingredients",
+    failureRedirect: "/auth/login",
+    passReqToCallback: true
   })
 );
+
+router.get('/github', passport.authenticate('github'));
+
+router.get('/auth/github/callback',
+  passport.authenticate('github', {
+    successRedirect: '/',
+    failureRedirect: '/login'
+  })
+)
 
 router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
 router.post("/signup", (req, res, next) => {
-  console.log("hello?", req.body);
+
   const username = req.body.username;
   const password = req.body.password;
+  const defaultUserImage =
+    "https://res.cloudinary.com/jeffmoraes/image/upload/v1574348835/images/unknown-user.jpg.jpg";
+  let imagePath = req.file ? req.file.url : defaultUserImage;
 
   if (username === "" || password === "") {
     res.render("auth/signup", {

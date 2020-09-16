@@ -40,6 +40,10 @@ const schemaRecipe = new Schema({
     type: [],
     required: true
   },
+  likes: {
+    type: Number,
+    default: 0
+  },
 });
 
 const Recipe = mongoose.model("Recipe", schemaRecipe);
