@@ -5,32 +5,26 @@ const router = express.Router();
 
 router.get("/ingredients", (req, res, next) => {
   Ingredient.find({})
-  .then((ingredients) => {
-    console.log(ingredients);
-    res.render("ingredients/ingredients", { ingredients })
-    .catch((err) => {
-      console.log(err);
-    });
-  });
-});
-
-  router.post("/ingredients", (req, res, next) => {
-    // const { potatoes } = req.body;
-    // const potatoes = req.body.potatoes
-    // console.log(potatoes)
-  Ingredient.find({})
-  .then((keywords) => {
-    let arr = [];
-    const filtered = keywords.filter(keyword => {
-      req.body[keyword]
+    .then((ingredients) => {
+      console.log(ingredients);
+      res.render("ingredients/ingredients", { ingredients })
     })
-    arr.push(filtered)
-    console.log(arr)
-  // res.render("/match")
-  //   })
-  //   .catch(err => next(err))
-  // })
-});
-});
+    .catch(err => {
+      next(err)
+    })
+})
+  
+
+router.post("/ingredients", (req, res, next) => {
+  const clickedKeywords = req.body.keywords
+  Recipe.find({ keyWords: { $in: clickedKeywords } })
+    .then((recipes) => {
+      console.log(recipes)
+      res.render("recipe/match", { recipes })
+    })
+    .catch(err => next(err))
+  //to show the recipes where the keywords array contains at least one of the clickedKeywords
+})
+
 
 module.exports = router;

@@ -4,10 +4,10 @@
   <form action="/ingredients" method="POST">
   {{#each ingredients}}
   {{#each name}}
-    <input type="checkbox" id="name" name="{{this}}" value="{{this}}">
+    <input type="checkbox" id="name" name="keywords" value="{{this}}">
     <label for="ingredients">{{this}}</label><br>
   {{/each}}
   {{/each}}
-  <button type="submit">Match</button>
+  <a href="/recipe/match"><button type="submit">Match</button></a>
    </form>
 </div>
