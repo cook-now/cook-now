@@ -53,18 +53,17 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
-app.locals.title = "Cook Now";
+app.locals.title = "CookNow";
 
 app.use(flash());
 //require("/passport")(app);
 
-
 //  passport setup
 
-const User = require('./models/User');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
+const User = require("./models/User");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const bcrypt = require("bcrypt");
 
 passport.serializeUser((user, done) => {
   done(null, user._id);
@@ -72,35 +71,34 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((id, done) => {
   User.findById(id)
-    .then(dbUser => {
+    .then((dbUser) => {
       done(null, dbUser);
     })
-    .catch(error => {
+    .catch((error) => {
       done(error);
-    })
+    });
 });
 
 passport.use(
   new LocalStrategy((username, password, done) => {
     User.findOne({ username: username })
-      .then(found => {
+      .then((found) => {
         if (found === null) {
-          done(null, false, { message: 'Wrong Credentials' })
+          done(null, false, { message: "Wrong Credentials" });
         } else if (!bcrypt.compareSync(password, found.password)) {
-          done(null, false, { message: 'Wrong Credentials' })
+          done(null, false, { message: "Wrong Credentials" });
         } else {
           done(null, found);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         done(error, false);
-      })
+      });
   })
-)
+);
 
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 const index = require("./routes/index");
 app.use("/", index);

@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: "Space Mono", monospace;
   background-color: beige;
@@ -23,6 +27,13 @@ body {
   height: 100%;
   filter: brightness(70%); }
 
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .nav-menu .navbar-brand {
+    font-size: 1.5rem; }
+
 .top-home {
   height: 75vh;
   display: flex;
@@ -38,15 +49,11 @@ body {
       font-size: 2rem; }
     .top-home .title-home p {
       font-size: 1.1rem; }
-    .top-home .title-home a {
-      color: white;
-      border-color: white;
-      font-size: 1.1rem; }
     .top-home .title-home a:hover {
       border: none; }
 
 .title {
-  padding: 5vh 2vw 0;
+  padding: 1vh 1vw;
   display: flex; }
   .title img {
     border-radius: 50%;
@@ -90,11 +97,6 @@ body {
   opacity: 0.3;
   height: 40px;
   margin: 0 2vw; }
-
-.recipe-details-header {
-  background-image: url("../images/header-create-recipe.jpg");
-  background-size: cover;
-  height: 11rem; }
 
 .recipe-layout-container {
   margin-top: 5vw;

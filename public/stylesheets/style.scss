@@ -1,11 +1,9 @@
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  // color: white;
-  // font-family: "Merriweather";
   font-family: "Space Mono", monospace;
   background-color: beige;
 
@@ -34,15 +32,18 @@ body {
   filter: brightness(70%);
 }
 
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navbar-brand {
+    // margin-bottom: 3px;
+    font-size: 1.5rem;
+  }
+}
+
 .top-home {
-  // background-image: url("../images/bg-home.png");
-  // background-size: cover;
-  // filter: brightness(50%);
-
-  // opacity: 0.5;
-  // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  // background-color: rgba(0, 0, 0, 0.2);
-
   height: 75vh;
   display: flex;
   justify-content: flex-start;
@@ -50,35 +51,23 @@ body {
   // text-align: center;
 
   .title-home {
-    // font-family: "Muli";
-
     color: white;
-
-    // width: 40vw;
-    // height: 35vh;
-
     margin-left: 10vw;
     h1 {
-      // font-family: "Sacramento";
-      // font-family: "Merriweather", cursive;
       font-family: "Libre Baskerville", cursive;
-      // font-weight: bold;
-      // font-family: "Pacifico", cursive;
-      // font-family: "Zeyada", cursive;
       font-size: 5.5rem;
     }
     h2 {
-      // font-family: "Libre Baskerville", cursive;
       font-size: 2rem;
     }
     p {
       font-size: 1.1rem;
     }
-    a {
-      color: white;
-      border-color: white;
-      font-size: 1.1rem;
-    }
+    // a {
+    //   color: white;
+    //   border-color: white;
+    //   font-size: 1.1rem;
+    // }
     a:hover {
       border: none;
     }
@@ -86,7 +75,7 @@ body {
 }
 
 .title {
-  padding: 5vh 2vw 0;
+  padding: 1vh 1vw;
   display: flex;
   img {
     border-radius: 50%;
@@ -96,7 +85,6 @@ body {
   a {
     text-decoration: none;
     color: black;
-    // color: darkgray;
   }
   a:hover {
     color: gray;
@@ -112,7 +100,6 @@ body {
   padding-left: 3vw;
 
   .each-recipe {
-    // font-family: 14px "Merriweather";
     width: 17vw;
     height: 25vw;
 
@@ -120,10 +107,6 @@ body {
     margin: 0 2vw 5vh 0;
 
     background-color: #f2bf35;
-    // background-color: #35f2aa;
-    // background-color: rgb(242, 191, 53);
-    // opacity: 0.6;
-    // filter:alpha(opacity=40);
 
     img {
       object-fit: cover;
@@ -132,12 +115,9 @@ body {
       height: 250px;
     }
     p {
-      // font-family: 14px "Merriweather";
       margin-top: 12px;
       color: black;
       font-size: 1.1rem;
-      // background-color: rgb(242, 191, 53);
-      // opacity: 0.6;
     }
   }
 
@@ -162,17 +142,12 @@ body {
 
 // recipes-view
 
-.recipe-details-header {
-  background-image: url("../images/header-create-recipe.jpg");
-  background-size: cover;
-  height: 11rem;
-}
-
 .recipe-layout-container {
   margin-top: 5vw;
   margin-bottom: 1rem;
   padding-left: 9vw;
   padding-right: 10vw;
+
   h3 {
     // font-style: bold;
   }
