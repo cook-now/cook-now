@@ -26,5 +26,4 @@ router.post("/ingredients", (req, res, next) => {
   //to show the recipes where the keywords array contains at least one of the clickedKeywords
 })
 
-
 module.exports = router;

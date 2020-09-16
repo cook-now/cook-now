@@ -19,8 +19,6 @@
   
 </head>
 
-<body>
-
   <nav class="navbar navbar-light bg-light nav-menu">
 
     <a href="/"><img src="../images/logo.png" width="180" height="60" title="Logo" alt="Logo"></a>
@@ -60,7 +58,7 @@
 
     <div>
       {{#if loggedIn}}
-      {{!-- <a class="btn btn-outline-success" href="/{{loggedIn.username}}">{{loggedIn.username}}</a> --}}
+      <a class="btn btn-outline-success" href="/{{loggedIn.username}}">{{loggedIn.username}}</a>
       <a class="btn btn-success" href="/ingredients">My Fridge</a>
       <a class="btn btn-danger" href="/auth/logout">Logout</a>
       {{else}}
@@ -70,12 +68,9 @@
     </div>
   </nav>
 
-  {{{body}}}
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</body>
-
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
   integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="/javascripts/script.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  {{{body}}}
 </html>

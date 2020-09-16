@@ -7,7 +7,7 @@ const { loginCheck } = require('./middlewares');
 router.get("/", (req, res, next) => {
   Recipe.find({})
   .then((recipes) => {
-    res.render("index", { recipes });
+    res.render("index", { recipes, loggedIn: req.user });
     }).catch((err) => {
     console.log(err);
 });
