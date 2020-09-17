@@ -79,7 +79,11 @@ app.use(
   })
 );
 
+<<<<<<< HEAD
+
+=======
 app.use(flash());
+>>>>>>> final
 require("./passport")(app);
 
 // passport configuration
