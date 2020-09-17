@@ -9,7 +9,6 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 const logger = require("morgan");
 const path = require("path");
-
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const flash = require("connect-flash");
@@ -66,7 +65,7 @@ hbs.registerHelper("ifUndefined", (value, options) => {
 });
 
 // default value for title local
-app.locals.title = "Flavor-it";
+app.locals.title = "CookNow";
 
 // Enable authentication using session + passport
 app.use(
@@ -82,7 +81,6 @@ app.use(
 );
 
 
-app.use(flash());
 require("./passport")(app);
 
 // passport configuration
@@ -194,6 +192,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // end of passport configuration
+app.use(flash());
 
 
 //session end

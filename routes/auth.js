@@ -8,9 +8,7 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 router.get("/login", (req, res, next) => {
-  res.render("auth/login")
-  // { message: req.flash("error") 
-
+  res.render("auth/login", {message: req.flash("error") })
 });
 
 router.post(
@@ -18,6 +16,7 @@ router.post(
   passport.authenticate("local", {
     successRedirect: "/ingredients",
     failureRedirect: "/auth/login",
+    failureFlash: true,
     passReqToCallback: true
   })
 );
