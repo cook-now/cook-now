@@ -78,7 +78,7 @@ const ingredients = {
 mongoose
   .connect("mongodb://localhost/cook-now")
   .then(() => console.log("connected"))
-  .catch((err) => console.log(er));
+  .catch((err) => console.log(err));
 
 Ingredient.insertMany(ingredients)
   .then((documents) => {

@@ -69,7 +69,6 @@ body {
 }
 
 .title {
-  // padding: 5vh 2vw 0;
   display: flex;
   img {
     border-radius: 50%;
@@ -89,13 +88,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-
-  // padding: 5vh 0;
   padding-left: 3vw;
 
   .each-recipe {
     width: 17vw;
-    // height: 25vw;
 
     text-align: center;
     margin: 0 2vw 5vh 0;
@@ -103,7 +99,6 @@ body {
     background-color: #f2bf35;
 
     img {
-      // border-radius: 25px;
       object-fit: cover;
       object-position: center;
       width: 100%;
@@ -154,13 +149,11 @@ body {
     margin-bottom: 2rem;
     padding: 0;
     img {
-      // border-radius: 25px;
       width: 100%;
     }
   }
 
   .recipe-img-container-detail {
-    // background-color: white;
     img {
       position: relative;
       top: 50%;
@@ -226,7 +219,6 @@ body {
 
   .button:hover {
     background: #f5f5dc;
-    // color: white;
   }
 }
 
@@ -234,22 +226,23 @@ body {
 
 // my fridge
 
-// .food-form {
-//   padding-left: 2vw;
-//   padding-right: 3vw;
-//   text-align: justify;
+.food-form {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: flex-start;
 
-.food-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  .food-container {
+    // padding-top: 10vh;
 
-  // padding: 5vh 0;
-  padding-left: 1vw;
-  padding-right: 2vw;
-  text-align: justify;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
 
-  .button {
+    padding-left: 1vw;
+    // margin: 0;
+  }
+
+  button {
     border: 0;
     background: none;
     display: block;
@@ -264,10 +257,14 @@ body {
     transition: 0.5s;
   }
 
-  .button:hover {
-    background: #dc3545;
+  // #f2bf35
+
+  button:hover {
+    background: #ff4c45;
     color: white;
   }
+
+
 }
 
 // media video
@@ -288,11 +285,11 @@ body {
 
 // media responsive
 
-@media (min-width: 576px) {
-  #ingredient-display {
-    padding-right: 30%;
-  }
-}
+// @media (min-width: 576px) {
+//   #ingredient-display {
+//     padding-right: 30%;
+//   }
+// }
 
 @media (max-width: 576px) {
   .flex-container {
@@ -315,13 +312,6 @@ body {
   .login-form > .login-container {
     width: 100vw;
     padding: 10vw;
-  }
-
-  .food-container {
-    // justify-content: flex-start;
-    width: 100vw;
-    text-align: left;
-    // padding: 10vw;
   }
 
   .top-home {
