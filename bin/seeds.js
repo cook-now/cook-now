@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Recipe = require("../models/Recipe");
+require("dotenv").config();
 
 const recipes = [
   {
@@ -625,7 +626,7 @@ const recipes = [
 ];
 
 mongoose
-  .connect("mongodb://localhost/cook-now")
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("connected"))
   .catch((err) => console.log(er));
 
