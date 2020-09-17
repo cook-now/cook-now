@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 
 const bodyParser = require("body-parser");
@@ -16,14 +15,14 @@ const flash = require("connect-flash");
 
 mongoose
   .connect(process.env.MONGODB_URI || "mongodb://localhost/cook-now", {
-    useNewUrlParser: true
+    useNewUrlParser: true,
   })
-  .then(x => {
+  .then((x) => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
     );
   })
-  .catch(err => {
+  .catch((err) => {
     console.error("Error connecting to mongo", err);
   });
 
@@ -46,7 +45,7 @@ app.use(
   require("node-sass-middleware")({
     src: path.join(__dirname, "public"),
     dest: path.join(__dirname, "public"),
-    sourceMap: true
+    sourceMap: true,
   })
 );
 
@@ -66,7 +65,7 @@ hbs.registerHelper("ifUndefined", (value, options) => {
 });
 
 // default value for title local
-app.locals.title = "Flavor-it";
+app.locals.title = "CookNow";
 
 // Enable authentication using session + passport
 app.use(
@@ -76,21 +75,20 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({
-      mongooseConnection: mongoose.connection
-    })
+      mongooseConnection: mongoose.connection,
+    }),
   })
 );
-
 
 app.use(flash());
 require("./passport")(app);
 
 // passport configuration
 
-const User = require('./models/User');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt');
+const User = require("./models/User");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const bcrypt = require("bcrypt");
 
 passport.serializeUser((user, done) => {
   done(null, user._id);
@@ -98,103 +96,105 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((id, done) => {
   User.findById(id)
-    .then(dbUser => {
+    .then((dbUser) => {
       done(null, dbUser);
     })
-    .catch(error => {
+    .catch((error) => {
       done(error);
-    })
+    });
 });
 
 passport.use(
   new LocalStrategy((username, password, done) => {
     User.findOne({ username: username })
-      .then(found => {
+      .then((found) => {
         if (found === null) {
-          done(null, false, { message: 'Wrong Credentials' })
+          done(null, false, { message: "Wrong Credentials" });
         } else if (!bcrypt.compareSync(password, found.password)) {
-          done(null, false, { message: 'Wrong Credentials' })
+          done(null, false, { message: "Wrong Credentials" });
         } else {
           done(null, found);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         done(error, false);
-      })
+      });
   })
-)
+);
 
 // passport configuration
 
-
 passport.serializeUser((user, done) => {
   done(null, user._id);
 });
 
 passport.deserializeUser((id, done) => {
   User.findById(id)
-    .then(dbUser => {
+    .then((dbUser) => {
       done(null, dbUser);
     })
-    .catch(error => {
+    .catch((error) => {
       done(error);
-    })
+    });
 });
 
 passport.use(
   new LocalStrategy((username, password, done) => {
     User.findOne({ username: username })
-      .then(found => {
+      .then((found) => {
         if (found === null) {
-          done(null, false, { message: 'Wrong Credentials' })
+          done(null, false, { message: "Wrong Credentials" });
         } else if (!bcrypt.compareSync(password, found.password)) {
-          done(null, false, { message: 'Wrong Credentials' })
+          done(null, false, { message: "Wrong Credentials" });
         } else {
           done(null, found);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         done(error, false);
-      })
+      });
   })
-)
+);
 
-const GithubStrategy = require('passport-github').Strategy;
+const GithubStrategy = require("passport-github").Strategy;
 
 passport.use(
   new GithubStrategy(
     {
       clientID: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
-      callbackURL: 'http://127.0.0.1:3000/auth/github/callback'
+      callbackURL: "http://127.0.0.1:3000/auth/github/callback",
     },
     (accessToken, refreshToken, profile, done) => {
       // find a user with profile.id as githubId or create one
       console.log(profile);
       User.findOne({ githubId: profile.id })
-        .then(found => {
+        .then((found) => {
           if (found !== null) {
             // user already exists
             done(null, found);
           } else {
             // no user with that github id
-            return User.create({ githubId: profile.id, name: profile._json.login, avatar: profile._json.avatar_url }).then(dbUser => {
+            return User.create({
+              githubId: profile.id,
+              name: profile._json.login,
+              avatar: profile._json.avatar_url,
+            }).then((dbUser) => {
               done(null, dbUser);
-            })
+            });
           }
         })
-        .catch(error => {
+        .catch((error) => {
           done(error);
-        })
+        });
     }
   )
-)
+);
 
 app.use(passport.initialize());
 app.use(passport.session());
 
 // end of passport configuration
-
 
 //session end
 

@@ -6,7 +6,6 @@
     padding: 10px 5px 15px 20px;
   }
 </style>
-<br>
 
 <div class="food-form">
 
@@ -14,9 +13,12 @@
     <form action="/ingredients" method="POST">
       {{#each ingredients}}
       {{#each name}}
-      <label class="p-2">
-        <input type="checkbox" id="checkbox_id" name="keywords" value="{{this}}"> {{this}}
+
+      <label class="checkbox p-2 m-2 btn-warning rounded-pill">
+        <input type="checkbox" id="checkbox_id" name="keywords" value="{{this}}">&nbsp;{{this}}
       </label>
+      <span class="checkmark"></span>
+      <i class="fas fa-utensils"></i>
       {{/each}}
       {{/each}}
       <br>
