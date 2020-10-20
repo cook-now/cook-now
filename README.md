@@ -42,7 +42,7 @@ npm run dev
 
 ==============
 
-Built with
+Built with:
 
 Node.js
 
